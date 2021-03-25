@@ -7,14 +7,12 @@
     },
     "license": "MIT",
     "scripts": {
-        "dev": "webpack serve",
-        "start": "node server.js",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "start": "webpack-dev-server --open"
     },
     "dependencies": {
         "axios": "^0.21.1",
         "bootstrap": "^4.6.0",
-        "express": "^4.17.1",
         "history": "^4.10.1",
         "react": "^16.13.0",
         "react-bootstrap": "^1.5.2",

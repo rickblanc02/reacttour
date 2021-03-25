@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { Table } from 'reactstrap';
 
 import { userTutenActions } from '../../_actions';
 
@@ -138,7 +139,7 @@ function LoginTuten() {
                 </div>
             </form>
             {userTuten.userTuten &&
-                        <div className="alert alert-success">Resultado: {re} </div>
+                        <div className="alert alert-success">Success {re} </div>
                         
                         
                     }
@@ -150,14 +151,44 @@ function LoginTuten() {
             </button>
             }
 {userTuten.userTuten &&
-                <ul>
+             <div>   
+               {/* <ul>
                     {booking.map((user, index) =>
                         <li key={user.professionalPrice}>
                             {user.professionalPrice + ' ' + user.details}
                            
                         </li>
                     )}
-                </ul>
+                    </ul> */}
+
+                <Table dark>
+      <thead>
+        <tr>
+         
+          <th>BookingId</th>
+          <th>Client</th>
+          <th>Fecha de Creación</th>
+          <th>Direccion</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+      {booking.map((user, index) => 
+        <tr key={user.professionalPrice}>
+         
+          <td>{user.bookingId}</td>
+          <td>{user.tutenUserClient.firstName}  {user.tutenUserClient.lastName}</td>
+          <td>{user.bookingTime}</td>
+          <td>{user.locationId.streetAddress}</td>
+          <td>{user.bookingPrice}</td>
+        </tr>
+       )} 
+       
+      </tbody>
+    </Table>
+
+              </div>  
+                
 }
         </div>
     );
