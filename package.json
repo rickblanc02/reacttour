@@ -12,7 +12,8 @@
     "scripts": {
         "dev": "webpack serve",
         "start": "node server.js",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "heroku-postbuild": "npm install && npm run build"
     },
     "dependencies": {
         "axios": "^0.21.1",
