@@ -5,7 +5,10 @@
         "type": "git",
         "url": ""
     },
-    "license": "MIT",
+    "engines": {
+        "node": "14.15.4",
+        "npm": "6.14.11"
+        },
     "scripts": {
         "dev": "webpack serve",
         "start": "node server.js",
