@@ -59,7 +59,7 @@ function TimeUtc() {
                 </div>
                 <div className="form-group">
                     <label>Time UTC</label>
-                    <input type="number" name="timeZone" value={timeZone} onChange={handleChange} className={'form-control' + (submitted && !timeZone ? ' is-invalid' : '')} />
+                    <input type="number" max="11" min="-11" name="timeZone" value={timeZone} onChange={handleChange} className={'form-control' + (submitted && !timeZone ? ' is-invalid' : '')} />
                     {submitted && !timeZone &&
                         <div className="invalid-feedback">timeZone is required</div>
                     }
